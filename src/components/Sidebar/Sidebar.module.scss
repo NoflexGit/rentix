@@ -1,0 +1,19 @@
+@import '~@/assets/styles/variables.scss';
+
+.sidebar {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: $sidebar-width;
+  padding-right: 50px;
+  padding-left: 30px;
+  z-index: 1;
+  background-color: $color-light-blue;
+}
+
+.logout {
+  margin-top: auto;
+  margin-bottom: 20px;
+  padding-right: 30px;
+}
