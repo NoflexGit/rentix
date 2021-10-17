@@ -1,11 +1,7 @@
 import React from 'react';
 
-const App = () => {
-  return (
-    <div className="App">
-
-    </div>
-  );
-}
+const App = (): JSX.Element => {
+  return <div></div>;
+};
 
 export default App;
