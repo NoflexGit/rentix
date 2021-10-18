@@ -1,8 +1,8 @@
 import React from 'react';
-import Main from '@/pages/Main/Main';
+import Routes from '@/routes/Routes';
 
 const App = (): JSX.Element => {
-  return <Main />;
+  return <Routes />;
 };
 
 export default App;

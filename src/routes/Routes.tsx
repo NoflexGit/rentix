@@ -1,11 +1,13 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Main from '@/pages/Main/Main';
+import MainPage from '@/pages/Main/Main';
+import SignInPage from '@/pages/SighIn/SignIn';
 
 const RoutesList = (): JSX.Element => {
   return (
     <Routes>
-      <Route path="/" element={<Main />} />
+      <Route path="/" element={<MainPage />} />
+      <Route path="/login" element={<SignInPage />} />
     </Routes>
   );
 };
