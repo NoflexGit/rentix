@@ -14,10 +14,10 @@ const Sidebar = (): JSX.Element => {
 
   return (
     <div className={styles.sidebar}>
-      <Logo />
+      <Logo className={styles.sidebarLogo} />
       <SidebarMenu />
       <div className={styles.logout}>
-        <Button size="small" onClick={logout} block>
+        <Button size="small" onClick={logout} fluid>
           Logout
         </Button>
       </div>

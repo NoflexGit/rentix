@@ -1,15 +1,34 @@
 $color-white: #ffffff;
-$color-blue: #98c1d9;
-$color-dark-blue: #3d5a80;
-$color-light-blue: #e0fbfc;
-$color-orange: #ee6c4d;
-$color-asphalt: #293241;
+// Primary
+$color-primary-900: #429ebd;
+$color-primary-600: #62aec8;
+$color-primary-300: #81bed3;
+$color-primary-100: #b3d8e5;
 
-$sidebar-width: 280px;
+// Secondary
+$color-secondary-900: #053f5c;
+$color-secondary-600: #0975aa;
+$color-secondary-300: #62c5f6;
+$color-secondary-100: #bae6fb;
 
-$link__color: $color-dark-blue;
-$link-hover__color: #688ab6;
+// Accent 1
+$color-accent-1-900: #f7ad19;
+$color-accent-1-600: #f9bd47;
+$color-accent-1-300: #fcdea3;
+$color-accent-1-100: #fdefd1;
 
-$button-default__background-color: #3d5a80;
-$button-default-hover__background-color: #5075a5;
-$button-default-active__background-color: #354e6e;
+// Accent 2
+$color-accent-2-900: #f47d60;
+$color-accent-2-600: #f69780;
+$color-accent-2-300: #f8b1a0;
+$color-accent-2-100: #fde5df;
+
+// Dark
+$color-dark-900: #1b1d21;
+$color-dark-600: #444953;
+$color-dark-300: #6c7484;
+$color-dark-100: #9ca2ae;
+
+// ==== Sidebar ==== //
+$sidebar__width: 280px;
+$sidebar__background-color: #e0fbfc;

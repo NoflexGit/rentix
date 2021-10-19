@@ -1,7 +1,8 @@
 @import '~@/assets/styles/variables.scss';
 
 .menu {
-  margin-top: 150px;
+  margin-top: 70px;
+  padding-right: 30px;
 }
 
 .item {
@@ -11,28 +12,26 @@
 
   svg {
     width: 18px;
-    height: 20px;
-    margin-right: 20px;
+    height: 18px;
+    margin-right: 15px;
   }
 }
 
 .link {
-  font-weight: 500;
-  color: $link__color;
-  font-size: 16px;
+  font-weight: 400;
+  color: $color-secondary-900;
+  font-size: 14px;
   transition: 0.2s color;
 
   &:hover {
-    color: $link-hover__color;
+    color: $color-secondary-600;
     text-decoration: none;
   }
 }
-
-.activeLink {
-  color: $color-orange;
-
-  &:hover {
-    color: $color-orange;
-    text-decoration: none;
-  }
-}
+//
+//.activeLink {
+//  &:hover {
+//    color: $color-accent-1-600;
+//    text-decoration: none;
+//  }
+//}

@@ -5,7 +5,7 @@ import styles from './Button.module.scss';
 interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   size?: 'small' | 'medium' | 'large';
   loading?: boolean;
-  block?: boolean;
+  fluid?: boolean;
 }
 
 const Button = ({
@@ -13,13 +13,12 @@ const Button = ({
   type = 'button',
   children,
   className,
-  block = false,
+  fluid = false,
 }: IProps): JSX.Element => {
   const classes = classNames(styles.button, className, styles[size], {
-    [`${styles.block}`]: block,
+    [`${styles.block}`]: fluid,
   });
 
-  console.log(classes);
   return (
     <button className={classes} type={type}>
       {children}

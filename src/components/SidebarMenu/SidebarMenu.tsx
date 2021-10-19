@@ -11,12 +11,12 @@ const SidebarMenu = (): JSX.Element => {
   const items = useMemo(
     () => [
       {
-        to: '/',
+        to: '/overview',
         icon: <DashboardSvg />,
         text: 'Overview',
       },
       {
-        to: '/apartment',
+        to: '/apartments',
         icon: <HouseSvg />,
         text: 'My apartments',
       },
