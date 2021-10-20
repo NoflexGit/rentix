@@ -1,11 +1,12 @@
 import React from 'react';
-import styles from './ContentHeader.module.scss';
 import UserInfo from '@/components/UserInfo/UserInfo';
+import PageTitle from '@/components/PageTitle/PageTitle';
+import styles from './ContentHeader.module.scss';
 
 const ContentHeader = (): JSX.Element => {
   return (
     <div className={styles.contentHeader}>
-      <div className={styles.pageTitle}>Overview</div>
+      <PageTitle />
       <UserInfo />
     </div>
   );

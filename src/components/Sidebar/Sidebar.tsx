@@ -9,7 +9,8 @@ const Sidebar = (): JSX.Element => {
   const navigate = useNavigate();
 
   const logout = useCallback(() => {
-    navigate('../login');
+    console.log(1);
+    navigate('auth');
   }, [navigate]);
 
   return (

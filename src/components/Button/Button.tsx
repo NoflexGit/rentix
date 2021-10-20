@@ -14,13 +14,14 @@ const Button = ({
   children,
   className,
   fluid = false,
+  onClick,
 }: IProps): JSX.Element => {
   const classes = classNames(styles.button, className, styles[size], {
     [`${styles.block}`]: fluid,
   });
 
   return (
-    <button className={classes} type={type}>
+    <button className={classes} type={type} onClick={onClick}>
       {children}
     </button>
   );

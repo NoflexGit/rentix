@@ -10,7 +10,7 @@ const Content = ({ children }: IProps): JSX.Element => {
   return (
     <div className={styles.content}>
       <ContentHeader />
-      {children}
+      <div className={styles.wrapper}>{children}</div>
     </div>
   );
 };
