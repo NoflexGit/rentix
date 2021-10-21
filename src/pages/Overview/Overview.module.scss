@@ -1,18 +1,10 @@
 @import '~@/assets/styles/variables.scss';
 
-.cards {
-  display: flex;
-  justify-content: space-between;
-  margin: 0 -15px;
-}
-
 .card {
   display: flex;
-  flex-basis: 33%;
   height: 130px;
   border-radius: 20px;
   padding: 20px;
-  margin: 0 15px;
   color: $color-white;
 }
 
@@ -74,7 +66,7 @@
 
 .pageBlockTitle {
   font-size: 24px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .recentServices {
@@ -104,14 +96,14 @@
 }
 
 .recentEventsList {
-  width: 33%;
+  padding: 20px;
   border-radius: 20px;
-  //border: 2px solid #d9dde0;
+  border: 2px solid #e1eeff;
+  box-shadow: 4px 24px 42px -30px rgba(147, 188, 219, 0.2);
 }
 
 .recentEventsListItem {
   display: flex;
-  margin-bottom: 20px;
 }
 
 .recentEventsListItemIcon {
