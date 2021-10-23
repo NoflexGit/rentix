@@ -5,14 +5,16 @@ import { ReactComponent as DocumentSvg } from '@/assets/images/icons/document.sv
 import { ReactComponent as BulbSvg } from '@/assets/images/icons/bulb.svg';
 import { ReactComponent as FlameSvg } from '@/assets/images/icons/flame.svg';
 import { ReactComponent as RaindropsSvg } from '@/assets/images/icons/raindrops.svg';
+import manager from '@/assets/images/manager.png';
 import Space from '@/components/Space/Space';
 import { Row, Col } from '@/components/Grid';
 
 import styles from './Overview.module.scss';
+import Button from '@/components/Button/Button';
 
 const OverviewPage = (): JSX.Element => {
   return (
-    <section>
+    <Space size={40} fluid>
       <Row tag="section">
         <Col>
           <div className={`${styles.card} ${styles.card_1}`}>
@@ -62,9 +64,9 @@ const OverviewPage = (): JSX.Element => {
       {/*  </div>*/}
       {/*</section>*/}
       <Row>
-        <Col width="4">
-          <section className={styles.recentEvents}>
-            <div className={styles.pageBlockTitle}>Latest Activity</div>
+        <Col width="3">
+          <div className={styles.pageBlockTitle}>Latest Activity</div>
+          <section className={styles.panel}>
             <section className={styles.recentEventsList}>
               <Space>
                 <div className={styles.recentEventsListItem}>
@@ -77,16 +79,20 @@ const OverviewPage = (): JSX.Element => {
                   </div>
                 </div>
                 <div className={styles.recentEventsListItem}>
-                  <div className={styles.recentEventsListItemIcon}>
+                  <div
+                    style={{ backgroundColor: '#f7ad19' }}
+                    className={styles.recentEventsListItemIcon}>
                     <DocumentSvg />
                   </div>
                   <div className={styles.recentEventsListItemText}>
-                    Bill paid{' '}
+                    Bill paid
                     <span className={styles.recentEventsListItemDate}>10:40 AM 19 Sep</span>
                   </div>
                 </div>
                 <div className={styles.recentEventsListItem}>
-                  <div className={styles.recentEventsListItemIcon}>
+                  <div
+                    style={{ backgroundColor: '#6a3093' }}
+                    className={styles.recentEventsListItemIcon}>
                     <KeySvg />
                   </div>
                   <div className={styles.recentEventsListItemText}>
@@ -107,8 +113,25 @@ const OverviewPage = (): JSX.Element => {
             </section>
           </section>
         </Col>
+        <Col width="3">
+          <div className={styles.pageBlockTitle}>Personal manager</div>
+          <section className={`${styles.panel} ${styles.personalManager}`}>
+            <div className={styles.personalManagerImage}>
+              <img src={manager} alt="managerImg" />
+            </div>
+            <div className={styles.personalManagerName}>James Williams</div>
+            <div className={styles.personalManagerText}>
+              Do you have any questions? <br /> Please call me or send me a message.
+            </div>
+
+            <div className={styles.personalManagerPhone}>+33 839 999 31 22</div>
+            <Button size="small" fluid>
+              Send message
+            </Button>
+          </section>
+        </Col>
       </Row>
-    </section>
+    </Space>
   );
 };
 

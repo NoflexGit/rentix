@@ -65,7 +65,8 @@
 }
 
 .pageBlockTitle {
-  font-size: 24px;
+  font-size: 18px;
+  font-weight: 500;
   margin-bottom: 15px;
 }
 
@@ -93,13 +94,6 @@
 
 .recentEvents {
   margin-top: 50px;
-}
-
-.recentEventsList {
-  padding: 20px;
-  border-radius: 20px;
-  border: 2px solid #e1eeff;
-  box-shadow: 4px 24px 42px -30px rgba(147, 188, 219, 0.2);
 }
 
 .recentEventsListItem {
@@ -131,5 +125,47 @@
 
 .recentEventsListItemDate {
   color: $color-dark-100;
+  font-size: 12px;
+}
+
+.panel {
+  position: relative;
+  padding: 20px;
+  background-color: #edf6ff;
+  border-radius: 20px;
+  //border: 2px solid #edf6ff;
+  box-shadow: 4px 24px 42px -30px rgba(147, 188, 219, 0.2);
+}
+
+.personalManager {
+}
+
+.personalManagerImage {
+  position: absolute;
+  top: -35px;
+  right: 10px;
+  width: 75px;
+  height: 75px;
+  overflow: hidden;
+  border-radius: 10px;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.personalManagerName {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.personalManagerPhone {
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+.personalManagerText {
+  color: $color-dark-300;
   font-size: 12px;
 }
