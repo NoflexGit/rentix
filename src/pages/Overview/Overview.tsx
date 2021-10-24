@@ -8,11 +8,12 @@ import { ReactComponent as RaindropsSvg } from '@/assets/images/icons/raindrops.
 import manager from '@/assets/images/manager.png';
 import Space from '@/components/Space/Space';
 import { Row, Col } from '@/components/Grid';
-
-import styles from './Overview.module.scss';
 import Button from '@/components/Button/Button';
+import useDocumentTitle from '@/hooks/useDocumentTitle';
+import styles from './Overview.module.scss';
 
 const OverviewPage = (): JSX.Element => {
+  useDocumentTitle('Overview');
   return (
     <Space size={40} fluid>
       <Row tag="section">
@@ -123,8 +124,8 @@ const OverviewPage = (): JSX.Element => {
             <div className={styles.personalManagerText}>
               Do you have any questions? <br /> Please call me or send me a message.
             </div>
-
-            <div className={styles.personalManagerPhone}>+33 839 999 31 22</div>
+            <div className={styles.personalManagerPhone}>+33 839 799 28 45</div>
+            <div className={styles.personalManagerPhone}>+33 839 977 31 22</div>
             <Button size="small" fluid>
               Send message
             </Button>

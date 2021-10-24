@@ -9,11 +9,13 @@ import { login } from '@/store/AuthSlice';
 import useAppDispatch from '@/hooks/useAppDispatch';
 import { useNavigate } from 'react-router-dom';
 import useAppSelector from '@/hooks/useAppSelector';
+import useDocumentTitle from '@/hooks/useDocumentTitle';
 
 const LoginPage = (): JSX.Element => {
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
   const isAuthenticated = useAppSelector((state) => state.auth.isAuthenticated);
+  useDocumentTitle('Sign In');
 
   useEffect(() => {
     if (isAuthenticated) {
