@@ -1,19 +1,1 @@
 @import '~@/assets/styles/variables.scss';
-
-.apartmentsListItem {
-  position: relative;
-  background-color: #edf6ff;
-  border-radius: 20px;
-
-  box-shadow: 4px 24px 42px -30px rgba(147, 188, 219, 0.2);
-}
-
-.apartmentsListItemImg {
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  overflow: hidden;
-  img {
-    width: 100%;
-    height: auto;
-  }
-}

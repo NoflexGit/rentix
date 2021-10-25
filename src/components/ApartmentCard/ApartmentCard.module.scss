@@ -1,0 +1,40 @@
+@import '~@/assets/styles/variables.scss';
+
+.wrapper {
+  background-color: #edf6ff;
+  border-radius: 20px;
+  box-shadow: 4px 24px 42px -30px rgba(147, 188, 219, 0.2);
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.01);
+  }
+}
+
+.image {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.info {
+  padding: 20px;
+}
+
+.address {
+  margin-bottom: 15px;
+  p {
+    font-weight: 500;
+    font-size: 18px;
+  }
+
+  span {
+    color: $color-dark-300;
+  }
+}
