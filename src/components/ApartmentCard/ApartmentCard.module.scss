@@ -16,6 +16,7 @@
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   overflow: hidden;
+  position: relative;
 
   img {
     width: 100%;
@@ -37,4 +38,18 @@
   span {
     color: $color-dark-300;
   }
+}
+
+.price {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  padding: 10px;
+  z-index: 1;
+  border-radius: 3px;
+  background-color: $color-accent-2-600;
+  line-height: 1;
+  color: $color-white;
+  font-weight: 500;
+  font-size: 16px;
 }
