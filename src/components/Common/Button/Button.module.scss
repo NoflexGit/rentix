@@ -5,7 +5,6 @@ $button-default-hover__background-color: $color-accent-2-600;
 $button-default-active__background-color: $color-accent-2-900;
 
 .button {
-  padding: 0 15px;
   margin: 0;
   font-weight: 400;
   border-radius: 10px;
@@ -16,9 +15,13 @@ $button-default-active__background-color: $color-accent-2-900;
   white-space: nowrap;
   cursor: pointer;
   color: $color-white;
-  background-color: $button-default__background-color;
+  background: transparent;
   transition: background-color 0.2s;
   letter-spacing: 0.83px;
+}
+
+.default {
+  background-color: $button-default__background-color;
 
   &:hover {
     background-color: $button-default-hover__background-color;
@@ -29,16 +32,30 @@ $button-default-active__background-color: $color-accent-2-900;
   }
 }
 
+.outlined {
+  border: 1px solid $color-white;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  &:active {
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+}
+
 .block {
   width: 100%;
 }
 
 .small {
   height: 40px;
-  font-size: 13px;
+  padding: 0 15px;
+  font-size: 12px;
 }
 
 .medium {
   height: 50px;
-  font-size: 15px;
+  padding: 0 20px;
+  font-size: 14px;
 }

@@ -1,4 +1,4 @@
-import React, { Children, useMemo } from 'react';
+import React, { Children, useMemo, FC } from 'react';
 import SpaceItem from './SpaceItem';
 import classNames from 'classnames';
 import styles from './Space.module.scss';
@@ -8,7 +8,6 @@ type TSizes = 'small' | 'medium' | 'large';
 interface IProps {
   size?: TSizes | number;
   className?: string;
-  children: React.ReactNode;
   fluid?: boolean;
 }
 
@@ -22,7 +21,7 @@ const getNumberSize = (size: TSizes | number) => {
   return typeof size === 'string' ? sizes[size] : size || 0;
 };
 
-const Space = ({ size = 'medium', className, children, fluid }: IProps): JSX.Element => {
+const Space: FC<IProps> = ({ size = 'medium', className, children, fluid }): JSX.Element => {
   const containerClassNames = classNames(styles.container, className, {
     [styles.containerFluid]: fluid,
   });

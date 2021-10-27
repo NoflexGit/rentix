@@ -1,13 +1,12 @@
-import React, { ReactNode } from 'react';
+import React, { FC } from 'react';
 
 interface IProps {
-  children: ReactNode;
   className: string;
   size: number;
   isLast: boolean;
 }
 
-const SpaceItem = ({ children, size, className, isLast }: IProps): JSX.Element => {
+const SpaceItem: FC<IProps> = ({ children, size, className, isLast }): JSX.Element => {
   let style: React.CSSProperties = {};
 
   if (!isLast) {

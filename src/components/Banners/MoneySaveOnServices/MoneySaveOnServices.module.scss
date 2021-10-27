@@ -1,0 +1,36 @@
+@import '~@/assets/styles/variables.scss';
+
+.banner {
+  position: relative;
+  padding: 50px;
+  border-radius: 20px;
+  height: 265px;
+  background-image: linear-gradient(90deg, #ff9a8b 0%, #ff6a88 55%, #ff99ac 100%);
+}
+
+.bannerImg {
+  position: absolute;
+  height: 300px;
+  width: 320px;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 5px center;
+  border-bottom-right-radius: 20px;
+}
+
+.bannerText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  color: $color-white;
+  font-weight: 700;
+  font-size: 36px;
+  width: 60%;
+}
+
+.bannerButton {
+  margin-top: 20px;
+}

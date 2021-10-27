@@ -4,6 +4,7 @@ import styles from './Button.module.scss';
 
 interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   size?: 'small' | 'medium' | 'large';
+  view?: 'default' | 'outlined';
   loading?: boolean;
   fluid?: boolean;
 }
@@ -11,12 +12,13 @@ interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 const Button = ({
   size = 'medium',
   type = 'button',
+  view = 'default',
   children,
   className,
   fluid = false,
   onClick,
 }: IProps): JSX.Element => {
-  const classes = classNames(styles.button, className, styles[size], {
+  const classes = classNames(styles.button, className, styles[size], styles[view], {
     [`${styles.block}`]: fluid,
   });
 

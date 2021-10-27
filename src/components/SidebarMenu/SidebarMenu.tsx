@@ -2,8 +2,8 @@ import React, { useMemo } from 'react';
 import { NavLink } from 'react-router-dom';
 import { ReactComponent as HouseSvg } from '@/assets/images/icons/home.svg';
 import { ReactComponent as DashboardSvg } from '@/assets/images/icons/dashboard.svg';
-import { ReactComponent as DollarSvg } from '@/assets/images/icons/broom.svg';
-import { ReactComponent as BroomSvg } from '@/assets/images/icons/dollar.svg';
+import { ReactComponent as BroomSvg } from '@/assets/images/icons/broom.svg';
+import { ReactComponent as DollarSvg } from '@/assets/images/icons/dollar.svg';
 import { ReactComponent as AddressBookSvg } from '@/assets/images/icons/address-book.svg';
 import styles from './SidebarMenu.module.scss';
 

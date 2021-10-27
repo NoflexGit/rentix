@@ -2,7 +2,7 @@ import React, { useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Logo from '@/components/Logo/Logo';
 import SidebarMenu from '@/components/SidebarMenu/SidebarMenu';
-import Button from '@/components/Button/Button';
+import Button from '@/components/Common/Button/Button';
 import styles from './Sidebar.module.scss';
 import useAppDispatch from '@/hooks/useAppDispatch';
 import { logout } from '@/store/AuthSlice';

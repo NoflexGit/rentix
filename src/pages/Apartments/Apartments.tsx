@@ -1,14 +1,14 @@
 import React from 'react';
-import { Row, Col } from '@/components/Grid';
+import { Row, Col } from '@/components/Common/Grid';
 import useDocumentTitle from '@/hooks/useDocumentTitle';
 import ApartmentCard from '@/components/ApartmentCard/ApartmentCard';
-import styles from './Apartments.module.scss';
 
 const ApartmentsPage = (): JSX.Element => {
   useDocumentTitle('My Apartments');
+
   return (
     <Row tag="section">
-      <Col width="4">
+      <Col width="3">
         <ApartmentCard />
       </Col>
     </Row>

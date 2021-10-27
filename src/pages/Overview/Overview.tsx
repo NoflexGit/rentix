@@ -6,16 +6,38 @@ import { ReactComponent as BulbSvg } from '@/assets/images/icons/bulb.svg';
 import { ReactComponent as FlameSvg } from '@/assets/images/icons/flame.svg';
 import { ReactComponent as RaindropsSvg } from '@/assets/images/icons/raindrops.svg';
 import manager from '@/assets/images/manager.png';
-import Space from '@/components/Space/Space';
-import { Row, Col } from '@/components/Grid';
-import Button from '@/components/Button/Button';
+import Space from '@/components/Common/Space/Space';
+import { Row, Col } from '@/components/Common/Grid';
+import Button from '@/components/Common/Button/Button';
 import useDocumentTitle from '@/hooks/useDocumentTitle';
 import styles from './Overview.module.scss';
+import MoneySaveOnServices from '@/components/Banners/MoneySaveOnServices/MoneySaveOnServices';
 
 const OverviewPage = (): JSX.Element => {
   useDocumentTitle('Overview');
   return (
     <Space size={40} fluid>
+      <Row tag="section">
+        <Col width="9">
+          <MoneySaveOnServices />
+        </Col>
+        <Col width="3">
+          <div className={styles.pageBlockTitle}>Personal manager</div>
+          <section className={`${styles.panel} ${styles.personalManager}`}>
+            <div className={styles.personalManagerImage}>
+              <img src={manager} alt="managerImg" />
+            </div>
+            <div className={styles.personalManagerName}>James Williams</div>
+            <div className={styles.personalManagerText}>
+              Do you have any questions? <br /> Please call me or send me a message.
+            </div>
+            <div className={styles.personalManagerPhone}>+33 839 799 28 45</div>
+            <Button size="small" fluid>
+              Send message
+            </Button>
+          </section>
+        </Col>
+      </Row>
       <Row tag="section">
         <Col>
           <div className={`${styles.card} ${styles.card_1}`}>
@@ -51,19 +73,6 @@ const OverviewPage = (): JSX.Element => {
           </div>
         </Col>
       </Row>
-
-      {/*<section className={styles.recentServices}>*/}
-      {/*  <section className={styles.pageBlockTitle}>Recent services</section>*/}
-      {/*  <div className={styles.recentServicesItem}>*/}
-      {/*    <div className={styles.recentServicesItemImg}>*/}
-      {/*      <img src={cleaning} alt="cleaning" />*/}
-      {/*    </div>*/}
-      {/*    <div className={styles.recentServicesItemText}>*/}
-      {/*      Cleaning*/}
-      {/*      <span className={styles.recentServicesItemPrice}>55$</span>*/}
-      {/*    </div>*/}
-      {/*  </div>*/}
-      {/*</section>*/}
       <Row>
         <Col width="3">
           <div className={styles.pageBlockTitle}>Latest Activity</div>
@@ -112,23 +121,6 @@ const OverviewPage = (): JSX.Element => {
                 </div>
               </Space>
             </section>
-          </section>
-        </Col>
-        <Col width="3">
-          <div className={styles.pageBlockTitle}>Personal manager</div>
-          <section className={`${styles.panel} ${styles.personalManager}`}>
-            <div className={styles.personalManagerImage}>
-              <img src={manager} alt="managerImg" />
-            </div>
-            <div className={styles.personalManagerName}>James Williams</div>
-            <div className={styles.personalManagerText}>
-              Do you have any questions? <br /> Please call me or send me a message.
-            </div>
-            <div className={styles.personalManagerPhone}>+33 839 799 28 45</div>
-            <div className={styles.personalManagerPhone}>+33 839 977 31 22</div>
-            <Button size="small" fluid>
-              Send message
-            </Button>
           </section>
         </Col>
       </Row>

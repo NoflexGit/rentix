@@ -1,9 +1,8 @@
 import React, { useCallback, useEffect } from 'react';
-import Logo from '@/components/Logo/Logo';
-import Form from '@/components/Form/Form';
-import Input from '@/components/Input/Input';
-import Space from '@/components/Space/Space';
-import Button from '@/components/Button/Button';
+import Form from '@/components/Common/Form/Form';
+import Input from '@/components/Common/Input/Input';
+import Space from '@/components/Common/Space/Space';
+import Button from '@/components/Common/Button/Button';
 import styles from './SignIn.module.scss';
 import { login } from '@/store/AuthSlice';
 import useAppDispatch from '@/hooks/useAppDispatch';
