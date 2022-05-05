@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Col Snapshots tests should match snapshot 1`] = `
+<div>
+  <div
+    class="component width-undefined"
+  >
+    Example
+  </div>
+</div>
+`;

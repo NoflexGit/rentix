@@ -1,4 +1,4 @@
-@import '~@/assets/styles/variables.scss';
+@import './src/assets/styles/variables';
 
 .menu {
   margin-top: 70px;
@@ -18,9 +18,10 @@
 }
 
 .link {
-  font-weight: 400;
+  font-weight: 500;
   color: $color-secondary-900;
   font-size: 14px;
+  text-transform: uppercase;
   transition: 0.2s color;
 
   &:hover {
@@ -28,10 +29,3 @@
     text-decoration: none;
   }
 }
-//
-//.activeLink {
-//  &:hover {
-//    color: $color-accent-1-600;
-//    text-decoration: none;
-//  }
-//}

@@ -1,10 +1,10 @@
-import React from 'react';
-import styles from './UserInfo.module.scss';
-import Avatar from '@/components/Avatar/Avatar';
-import { ReactComponent as BellSvg } from '@/assets/images/icons/bell.svg';
-import { ReactComponent as SettingsSvg } from '@/assets/images/icons/settings.svg';
+import React, { FC } from "react";
+import styles from "./UserInfo.module.scss";
+import Avatar from "../Avatar";
+import { ReactComponent as BellSvg } from "../../assets/images/icons/bell.svg";
+import { ReactComponent as SettingsSvg } from "../../assets/images/icons/settings.svg";
 
-const UserInfo = (): JSX.Element => {
+const UserInfo: FC = () => {
   return (
     <div className={styles.userInfo}>
       <button className={styles.notificationsBtn}>
@@ -16,7 +16,7 @@ const UserInfo = (): JSX.Element => {
       <Avatar />
       <div className={styles.text}>
         <div className={styles.name}>Maria</div>
-        <span>Tenant</span>
+        <span>Landlord</span>
       </div>
     </div>
   );

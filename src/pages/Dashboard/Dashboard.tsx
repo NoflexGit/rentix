@@ -1,20 +1,11 @@
-import React, { useEffect } from 'react';
-import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
-import Sidebar from '@/components/Sidebar/Sidebar';
-import Content from '@/components/Content/Content';
-import OverviewPage from '@/pages/Overview/Overview';
-import ApartmentsPage from '@/pages/Apartments/Apartments';
+import React, { FC } from "react";
+import { Route, Routes } from "react-router-dom";
+import Sidebar from "../../components/Sidebar/Sidebar";
+import Content from "../../components/Content/Content";
+import OverviewPage from "../Overview";
+import ApartmentsPage from "../Apartments";
 
-const MainPage = (): JSX.Element => {
-  const navigate = useNavigate();
-  const location = useLocation();
-
-  useEffect(() => {
-    if (location.pathname === '/') {
-      navigate('overview');
-    }
-  }, [navigate, location]);
-
+const DashboardPage: FC = () => {
   return (
     <>
       <Sidebar />
@@ -28,4 +19,4 @@ const MainPage = (): JSX.Element => {
   );
 };
 
-export default MainPage;
+export default DashboardPage;

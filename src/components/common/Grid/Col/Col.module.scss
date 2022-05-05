@@ -1,0 +1,30 @@
+@import './src/assets/styles/variables';
+
+.component {
+  padding: 0 12px;
+  flex-grow: 1;
+  flex-basis: 0;
+  max-width: 100%;
+}
+
+@for $i from 1 to 12 {
+  .width-#{$i} {
+    flex: 0 0 calc((100% / 12) * #{$i});
+    max-width: calc((100% / 12) * #{$i});
+  }
+}
+
+@each $breakpoint in $breakpoints {
+  $name: nth($breakpoint, 1);
+  $size: nth($breakpoint, 2);
+  @media screen and (min-width: $size) {
+    @for $i from 1 through 12 {
+      .width-#{$name}-#{$i} {
+        flex: 0 0 calc((100% / 12) * #{$i});
+        max-width: calc((100% / 12) * #{$i});
+      }
+    }
+  }
+}
+
+

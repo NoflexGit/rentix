@@ -1,19 +1,12 @@
-import React from 'react';
-import styles from './ApartmentCard.module.scss';
-import apartment1 from '@/assets/images/apartment-1.jpeg';
+import React, { FC } from "react";
+import styles from "./ApartmentCard.module.scss";
+import apartment1 from "../../assets/images/apartment-1.jpeg";
 
-interface IProps {
-  image?: string;
-  price?: string;
-  city?: string;
-  address?: string;
-}
-
-const ApartmentCard = ({ image, price, city, address }: IProps): JSX.Element => {
+const ApartmentCard: FC = () => {
   return (
     <section className={styles.wrapper}>
       <div className={styles.image}>
-        <div className={styles.price}>1200$</div>
+        <div className={styles.price}>1500$</div>
         <img src={apartment1} alt="Anemoonstraat 11MP" />
       </div>
       <div className={styles.info}>

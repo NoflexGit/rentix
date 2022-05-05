@@ -1,19 +1,17 @@
-import React, { useCallback } from 'react';
-import { useNavigate } from 'react-router-dom';
-import Logo from '@/components/Logo/Logo';
-import SidebarMenu from '@/components/SidebarMenu/SidebarMenu';
-import Button from '@/components/Common/Button/Button';
-import styles from './Sidebar.module.scss';
-import useAppDispatch from '@/hooks/useAppDispatch';
-import { logout } from '@/store/AuthSlice';
+import React, { FC } from "react";
+import Logo from "../Logo";
+import SidebarMenu from "../SidebarMenu";
+import Button from "../common/Button";
+import styles from "./Sidebar.module.scss";
+import useAppDispatch from "../../hooks/useAppDispatch";
+import { logout } from "../../store/AuthSlice";
 
-const Sidebar = (): JSX.Element => {
+const Sidebar: FC = () => {
   const dispatch = useAppDispatch();
-  // const navigate = useNavigate();
 
-  const handleLogoutButton = useCallback(() => {
+  const handleLogoutButton = () => {
     dispatch(logout());
-  }, [dispatch]);
+  };
 
   return (
     <div className={styles.sidebar}>
@@ -21,7 +19,7 @@ const Sidebar = (): JSX.Element => {
       <SidebarMenu />
       <div className={styles.logout}>
         <Button size="small" onClick={handleLogoutButton} fluid>
-          Logout
+          Sign out
         </Button>
       </div>
     </div>

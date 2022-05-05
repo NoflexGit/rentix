@@ -1,7 +1,7 @@
-import React from 'react';
-import Routes from '@/routes/Routes';
+import React, { FC } from "react";
+import Routes from "./routes";
 
-const App = (): JSX.Element => {
+const App: FC = () => {
   return <Routes />;
 };
 

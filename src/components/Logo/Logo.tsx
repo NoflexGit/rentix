@@ -1,13 +1,13 @@
-import React from 'react';
-import classNames from 'classnames';
-import logo from '@/assets/images/logo.svg';
-import styles from './Logo.module.scss';
+import React, { FC } from "react";
+import classNames from "classnames";
+import logo from "../../assets/images/logo.svg";
+import styles from "./Logo.module.scss";
 
 interface IProps {
   className?: string;
 }
 
-const Logo = ({ className }: IProps): JSX.Element => {
+const Logo: FC<IProps> = ({ className }) => {
   const logoClassNames = classNames(styles.logo, className);
 
   return (

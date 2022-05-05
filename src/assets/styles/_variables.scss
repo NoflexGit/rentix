@@ -31,5 +31,8 @@ $color-dark-300: #6c7484;
 $color-dark-100: #9ca2ae;
 
 // ==== Sidebar ==== //
-$sidebar__width: 280px;
+$sidebar__width: 260px;
 $sidebar__background-color: #e0fbfc;
+
+// ==== Breakpoints ==== //
+$breakpoints: xs 320px, sm 576px, md 768px, lg 992px;

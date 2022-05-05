@@ -1,9 +1,9 @@
-import React from 'react';
-import UserInfo from '@/components/UserInfo/UserInfo';
-import PageTitle from '@/components/Common/PageTitle/PageTitle';
-import styles from './ContentHeader.module.scss';
+import React, { FC } from "react";
+import UserInfo from "../UserInfo";
+import PageTitle from "../common/PageTitle";
+import styles from "./ContentHeader.module.scss";
 
-const ContentHeader = (): JSX.Element => {
+const ContentHeader: FC = () => {
   return (
     <div className={styles.contentHeader}>
       <PageTitle />

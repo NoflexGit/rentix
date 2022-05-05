@@ -1,44 +1,35 @@
-import React, { useMemo } from 'react';
-import { NavLink } from 'react-router-dom';
-import { ReactComponent as HouseSvg } from '@/assets/images/icons/home.svg';
-import { ReactComponent as DashboardSvg } from '@/assets/images/icons/dashboard.svg';
-import { ReactComponent as BroomSvg } from '@/assets/images/icons/broom.svg';
-import { ReactComponent as DollarSvg } from '@/assets/images/icons/dollar.svg';
-import { ReactComponent as AddressBookSvg } from '@/assets/images/icons/address-book.svg';
-import styles from './SidebarMenu.module.scss';
+import React, { FC } from "react";
+import { NavLink } from "react-router-dom";
+import { ReactComponent as HouseSvg } from "../../assets/images/icons/home.svg";
+import { ReactComponent as DashboardSvg } from "../../assets/images/icons/dashboard.svg";
+import { ReactComponent as DollarSvg } from "../../assets/images/icons/dollar.svg";
+import { ReactComponent as AddressBookSvg } from "../../assets/images/icons/address-book.svg";
+import styles from "./SidebarMenu.module.scss";
 
-const SidebarMenu = (): JSX.Element => {
-  const items = useMemo(
-    () => [
-      {
-        to: '/overview',
-        icon: <DashboardSvg />,
-        text: 'Overview',
-      },
-      {
-        to: '/apartments',
-        icon: <HouseSvg />,
-        text: 'My apartments',
-      },
-      {
-        to: '/residents',
-        icon: <AddressBookSvg />,
-        text: 'Residents',
-      },
-      {
-        to: '/bills',
-        icon: <DollarSvg />,
-        text: 'Bills',
-      },
-      {
-        to: '/services',
-        icon: <BroomSvg />,
-        text: 'Services',
-      },
-    ],
-    [],
-  );
+const items = [
+  {
+    to: "/overview",
+    icon: <DashboardSvg />,
+    text: "Overview",
+  },
+  {
+    to: "/apartments",
+    icon: <HouseSvg />,
+    text: "My Properties",
+  },
+  {
+    to: "/residents",
+    icon: <AddressBookSvg />,
+    text: "Clients",
+  },
+  {
+    to: "/bills",
+    icon: <DollarSvg />,
+    text: "Bills",
+  },
+];
 
+const SidebarMenu: FC = () => {
   return (
     <nav className={styles.menu}>
       {items.map(({ to, icon, text }) => (
@@ -48,7 +39,8 @@ const SidebarMenu = (): JSX.Element => {
             className={({ isActive }) =>
               isActive ? `${styles.link} ${styles.activeLink}` : styles.link
             }
-            to={to}>
+            to={to}
+          >
             {text}
           </NavLink>
         </div>

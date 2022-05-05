@@ -1,12 +1,12 @@
-import React from 'react';
-import styles from './Content.module.scss';
-import ContentHeader from '@/components/ContentHeader/ContentHeader';
+import React, { FC } from "react";
+import styles from "./Content.module.scss";
+import ContentHeader from "../ContentHeader";
 
 interface IProps {
   children: React.ReactNode;
 }
 
-const Content = ({ children }: IProps): JSX.Element => {
+const Content: FC<IProps> = ({ children }) => {
   return (
     <div className={styles.content}>
       <ContentHeader />

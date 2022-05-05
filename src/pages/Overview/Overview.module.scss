@@ -1,8 +1,7 @@
-@import '~@/assets/styles/variables.scss';
+@import './src/assets/styles/variables';
 
 .card {
   display: flex;
-  height: 130px;
   border-radius: 20px;
   padding: 20px;
   color: $color-white;
@@ -17,31 +16,33 @@
 .card_1 {
   background: #6190e8;
   background: linear-gradient(to right, #6190e8, #a7bfe8);
-  box-shadow: 0 43px 51px -40px #6190e87f;
 }
 
 .card_2 {
   background: #4cb8c4;
   background: linear-gradient(to left, #3cd3ad, #4cb8c4);
-  box-shadow: 0 43px 51px -40px #4cb8c47f;
+}
+
+.card_4 {
+  background: #00b4db;
+  background: linear-gradient(to right, #0083b0, #00b4db);
 }
 
 .card_3 {
   background: #6a3093;
   background: linear-gradient(to left, #a044ff, #6a3093);
-  box-shadow: 0 43px 51px -40px #6a30937f;
 }
 
 .metric {
-  font-size: 40px;
-  margin-left: -3px;
+  font-size: 32px;
   line-height: 1;
+  font-weight: 500;
 }
 
 .description {
+  margin-top: 10px;
   font-size: 12px;
   opacity: 0.8;
-  margin-bottom: 10px;
 }
 
 .icon {
@@ -115,6 +116,7 @@
 }
 
 .personalManager {
+  margin-bottom: 30px;
 }
 
 .personalManagerImage {
