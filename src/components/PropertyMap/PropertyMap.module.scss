@@ -1,0 +1,63 @@
+@import "./src/assets/styles/variables";
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.marker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  width: 32px;
+  height: 32px;
+  background-color: #6c3cea;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.tooltip {
+  position: absolute;
+  bottom: 32px;
+  width: 70px;
+  height: 70px;
+  padding: 3px;
+  border-radius: 10px;
+  background-color: $color-white;
+  margin-bottom: 10px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+  &:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -6px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 7px 5px 0 5px;
+    border-color: #ffffff transparent transparent transparent;
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+}

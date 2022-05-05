@@ -1,29 +1,30 @@
 import React, { FC } from "react";
-import { Routes, Route, Navigate } from "react-router-dom";
-import SignInPage from "../pages/SignIn/SignIn";
-import DashboardPage from "../pages/Dashboard/Dashboard";
-import PrivateRoute from "../components/PrivateRoute/PrivateRoute";
-import useAppSelector from "../hooks/useAppSelector";
-import { RootState } from "../store";
+import { Routes, Route } from "react-router-dom";
+import SignInPage from "../pages/SignIn";
+import Dashboard from "../layouts/Dashboard";
+import PrivateRoute from "../components/PrivateRoute";
+import OverviewPage from "../pages/Overview";
+import PropertiesPage from "../pages/Properties";
+import PropertyDetailsPage from "../pages/PropertyDetails";
+import App from "../App";
 
 const RoutesList: FC = () => {
-  const isAuthenticated = useAppSelector(
-    (state: RootState) => state.auth.isAuthenticated
-  );
   return (
     <Routes>
-      <Route
-        path="auth"
-        element={isAuthenticated ? <Navigate to="/overview" /> : <SignInPage />}
-      />
-      <Route
-        path="*"
-        element={
-          <PrivateRoute>
-            <DashboardPage />
-          </PrivateRoute>
-        }
-      />
+      <Route path="/" element={<App />}>
+        <Route path="login" element={<SignInPage />} />
+        <Route
+          element={
+            <PrivateRoute>
+              <Dashboard />
+            </PrivateRoute>
+          }
+        >
+          <Route index element={<OverviewPage />} />
+          <Route path="apartments" element={<PropertiesPage />} />
+          <Route path="apartments/:id" element={<PropertyDetailsPage />} />
+        </Route>
+      </Route>
     </Routes>
   );
 };

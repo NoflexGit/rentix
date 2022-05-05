@@ -1,16 +1,17 @@
-@import './src/assets/styles/variables';
+@import "./src/assets/styles/variables";
 
 .card {
   display: flex;
+  justify-content: space-between;
   border-radius: 20px;
   padding: 20px;
-  color: $color-white;
 }
 
 .text {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  color: $color-white;
 }
 
 .card_1 {

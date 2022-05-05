@@ -1,8 +1,8 @@
 import React, { FC } from "react";
-import Routes from "./routes";
+import { Outlet } from "react-router-dom";
 
 const App: FC = () => {
-  return <Routes />;
+  return <Outlet />;
 };
 
 export default App;

@@ -1,5 +1,6 @@
 import React, { Children, useMemo, FC } from "react";
 import classNames from "classnames";
+import SpaceItem from "./SpaceItem";
 import styles from "./Space.module.scss";
 
 type TSizes = "small" | "medium" | "large";
@@ -21,12 +22,7 @@ const getNumberSize = (size: TSizes | number) => {
   return typeof size === "string" ? sizes[size] : size || 0;
 };
 
-const Space: FC<IProps> = ({
-  size = "medium",
-  className,
-  children,
-  fluid,
-}): JSX.Element => {
+const Space: FC<IProps> = ({ size = "medium", className, children, fluid }) => {
   const containerClassNames = classNames(styles.container, className, {
     [styles.containerFluid]: fluid,
   });
@@ -35,8 +31,7 @@ const Space: FC<IProps> = ({
     [styles.itemFluid]: fluid,
   });
 
-  const itemSize = useMemo(() => getNumberSize(size), [size]);
-
+  const itemSize = getNumberSize(size);
   const childNodes = Children.toArray(children);
 
   const nodes = useMemo(() => {
@@ -44,6 +39,7 @@ const Space: FC<IProps> = ({
       <SpaceItem
         isLast={i === childNodes.length - 1}
         size={itemSize}
+        // eslint-disable-next-line react/no-array-index-key
         key={`${itemClassName}-${i}`}
         className={itemClassName}
       >

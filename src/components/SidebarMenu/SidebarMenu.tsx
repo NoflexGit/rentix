@@ -8,7 +8,7 @@ import styles from "./SidebarMenu.module.scss";
 
 const items = [
   {
-    to: "/overview",
+    to: "/",
     icon: <DashboardSvg />,
     text: "Overview",
   },

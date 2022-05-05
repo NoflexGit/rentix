@@ -1,6 +1,7 @@
-@import './src/assets/styles/variables';
+@import "./src/assets/styles/variables";
 
 .wrapper {
+  display: flex;
   background-color: #edf6ff;
   border-radius: 20px;
   box-shadow: 4px 24px 42px -30px rgba(147, 188, 219, 0.2);
@@ -13,26 +14,29 @@
 }
 
 .image {
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  min-width: 180px;
+  width: 180px;
+  border-radius: 20px;
   overflow: hidden;
   position: relative;
 
   img {
+    object-fit: cover;
     width: 100%;
-    height: auto;
+    height: 100%;
   }
 }
 
 .info {
   padding: 20px;
+  width: 100%;
 }
 
 .address {
   margin-bottom: 15px;
   p {
-    font-weight: 500;
-    font-size: 18px;
+    font-weight: 700;
+    font-size: 20px;
   }
 
   span {

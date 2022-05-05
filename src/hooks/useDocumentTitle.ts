@@ -1,8 +1,8 @@
-import { useEffect } from 'react';
+import { useEffect } from "react";
 
 const baseTitle = document.title;
 
-const useDocumentTitle = (title: string, resetOnUnmount: boolean = true) => {
+const useDocumentTitle = (title: string, resetOnUnmount = true) => {
   useEffect(() => {
     document.title = `${baseTitle} | ${title}`;
 

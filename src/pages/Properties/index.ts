@@ -1,3 +1,3 @@
-import Apartments from "./Apartments";
+import Apartments from "./Properties";
 
 export default Apartments;
