@@ -13,9 +13,9 @@ const items = [
     text: "Overview",
   },
   {
-    to: "/apartments",
+    to: "/explore",
     icon: <HouseSvg />,
-    text: "My Properties",
+    text: "Explore",
   },
   {
     to: "/residents",

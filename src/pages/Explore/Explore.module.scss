@@ -1,0 +1,9 @@
+.wrapper {
+  flex: 1;
+}
+
+.link {
+  &:hover {
+    text-decoration: none;
+  }
+}

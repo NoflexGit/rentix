@@ -4,8 +4,8 @@ import SignInPage from "../pages/SignIn";
 import Dashboard from "../layouts/Dashboard";
 import PrivateRoute from "../components/PrivateRoute";
 import OverviewPage from "../pages/Overview";
-import PropertiesPage from "../pages/Properties";
-import PropertyDetailsPage from "../pages/PropertyDetails";
+import PropertiesPage from "../pages/Explore";
+import PropertyDetailsPage from "../pages/Details";
 import App from "../App";
 
 const RoutesList: FC = () => {
@@ -21,8 +21,8 @@ const RoutesList: FC = () => {
           }
         >
           <Route index element={<OverviewPage />} />
-          <Route path="apartments" element={<PropertiesPage />} />
-          <Route path="apartments/:id" element={<PropertyDetailsPage />} />
+          <Route path="explore" element={<PropertiesPage />} />
+          <Route path="explore/:id" element={<PropertyDetailsPage />} />
         </Route>
       </Route>
     </Routes>

@@ -1,11 +1,12 @@
 import React, { FC, useState } from "react";
+import { Link } from "react-router-dom";
 
 import { Row, Col } from "../../components/common/Grid";
 import useDocumentTitle from "../../hooks/useDocumentTitle";
 import ApartmentCard from "../../components/ApartmentCard";
 import Space from "../../components/common/Space";
 import PropertyMap from "../../components/PropertyMap";
-import styles from "./Properties.module.scss";
+import styles from "./Explore.module.scss";
 
 import apartment1 from "../../assets/images/apartment-1.jpeg";
 import apartment2 from "../../assets/images/apartment-2.jpeg";
@@ -67,7 +68,7 @@ const items = [
 ];
 
 const ApartmentsPage: FC = () => {
-  useDocumentTitle("My Properties");
+  useDocumentTitle("Explore");
   const [active] = useState(items[0]);
 
   return (
@@ -75,7 +76,9 @@ const ApartmentsPage: FC = () => {
       <Col width="6">
         <Space fluid>
           {items.map((item) => (
-            <ApartmentCard data={item} key={item.id} />
+            <Link to={String(item.id)} key={item.id} className={styles.link}>
+              <ApartmentCard data={item} />
+            </Link>
           ))}
         </Space>
       </Col>

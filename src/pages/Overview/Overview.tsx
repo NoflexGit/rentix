@@ -62,59 +62,7 @@ const state1: Props = {
     },
   },
 };
-const state2: Props = {
-  series: [
-    {
-      name: "17 Prioress St",
-      data: [935, 935, 980, 980, 500, 980],
-    },
-    {
-      name: "13 Bartholomew St",
-      data: [1800, 1800, 1800, 1800, 1100, 1800],
-    },
-    {
-      name: "19 Vincent Square",
-      data: [700, 700, 700, 700, 0, 0],
-    },
-  ],
-  options: {
-    chart: {
-      type: "bar",
-      height: 350,
-      stacked: true,
-      toolbar: {
-        show: false,
-      },
-      zoom: {
-        enabled: true,
-      },
-    },
-    colors: ["#5d42bd", "#8762c8", "#a681d3"],
-    plotOptions: {
-      bar: {
-        horizontal: false,
-        borderRadius: 10,
-      },
-    },
-    xaxis: {
-      type: "datetime",
-      categories: [
-        "01/01/2021 GMT",
-        "02/01/2021 GMT",
-        "03/01/2021 GMT",
-        "04/01/2021 GMT",
-        "05/01/2021 GMT",
-        "06/01/2021 GMT",
-      ],
-    },
-    legend: {
-      position: "bottom",
-    },
-    fill: {
-      opacity: 1,
-    },
-  },
-};
+
 const OverviewPage: FC = () => {
   useDocumentTitle("Overview");
 
@@ -170,17 +118,6 @@ const OverviewPage: FC = () => {
                   />
                 </div>
               </div>
-            </Col>
-          </Row>
-          <Row>
-            <Col width={{ xs: 8 }}>
-              <div className={styles.pageBlockTitle}>Property statistics</div>
-              <ApexChart
-                options={state2.options}
-                series={state2.series}
-                type="bar"
-                height={350}
-              />
             </Col>
           </Row>
         </Space>

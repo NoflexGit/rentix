@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 import Sidebar from "../../components/Sidebar";
 import Content from "../../components/Content";
 
-const DashboardPage: FC = () => {
+const Dashboard: FC = () => {
   return (
     <>
       <Sidebar />
@@ -14,4 +14,4 @@ const DashboardPage: FC = () => {
   );
 };
 
-export default DashboardPage;
+export default Dashboard;

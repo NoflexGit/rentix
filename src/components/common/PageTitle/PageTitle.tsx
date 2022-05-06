@@ -4,20 +4,16 @@ import styles from "./PageTitle.module.scss";
 
 const locations = [
   {
-    pathname: "/overview",
+    pathname: "/",
     title: "Overview",
   },
   {
-    pathname: "/apartments",
-    title: "My Properties",
+    pathname: "/explore",
+    title: "Explore",
   },
   {
-    pathname: "/residents",
+    pathname: "/clients",
     title: "Clients",
-  },
-  {
-    pathname: "/services",
-    title: "Services",
   },
   {
     pathname: "/bills",
