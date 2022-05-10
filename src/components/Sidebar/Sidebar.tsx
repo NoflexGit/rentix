@@ -4,13 +4,13 @@ import SidebarMenu from "../SidebarMenu";
 import Button from "../common/Button";
 import styles from "./Sidebar.module.scss";
 import useAppDispatch from "../../hooks/useAppDispatch";
-import { logout } from "../../store/AuthSlice";
+import { logoutUser } from "../../store/user/slice";
 
 const Sidebar: FC = () => {
   const dispatch = useAppDispatch();
 
   const handleLogoutButton = () => {
-    dispatch(logout());
+    dispatch(logoutUser());
   };
 
   return (

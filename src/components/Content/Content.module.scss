@@ -17,6 +17,7 @@
 .wrapper {
   display: flex;
   flex: 1;
+  overflow: hidden;
   flex-direction: column;
-  padding: 50px 30px 30px 30px;
+  padding: 0 30px;
 }

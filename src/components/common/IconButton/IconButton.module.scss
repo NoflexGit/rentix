@@ -1,0 +1,62 @@
+@import "./src/assets/styles/variables";
+
+$button-default__background-color: $color-accent-2-900;
+$button-default-hover__background-color: $color-accent-2-600;
+$button-default-active__background-color: $color-accent-2-900;
+
+.button {
+  margin: 0;
+  font-weight: 400;
+  border-radius: 10px;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+  color: $color-white;
+  background: transparent;
+  transition: background-color 0.2s;
+}
+
+.default {
+  background-color: $button-default__background-color;
+
+  &:hover {
+    background-color: $button-default-hover__background-color;
+  }
+
+  &:active {
+    background-color: $button-default-active__background-color;
+  }
+
+  svg path {
+    fill: $color-white;
+  }
+}
+
+.block {
+  width: 100%;
+}
+
+.small {
+  width: 18px;
+  height: 18px;
+
+  svg {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+.medium {
+  width: 32px;
+  height: 32px;
+
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+}

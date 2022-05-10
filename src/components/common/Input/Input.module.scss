@@ -1,4 +1,4 @@
-@import './src/assets/styles/variables';
+@import "./src/assets/styles/variables";
 
 .inputWrapper {
   display: flex;
@@ -24,10 +24,10 @@
   transition: border-color 0.3s ease;
 
   &:hover {
-    border: 1px solid $color-secondary-600;
+    border: 1px solid $color-accent-3-600;
   }
 
   &:focus {
-    border: 1px solid $color-secondary-300;
+    border: 1px solid $color-accent-3-900;
   }
 }

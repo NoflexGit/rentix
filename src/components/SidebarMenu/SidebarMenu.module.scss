@@ -1,4 +1,4 @@
-@import './src/assets/styles/variables';
+@import "./src/assets/styles/variables";
 
 .menu {
   margin-top: 70px;
@@ -24,8 +24,24 @@
   text-transform: uppercase;
   transition: 0.2s color;
 
+  svg path {
+    transition: 0.2s fill;
+  }
+
   &:hover {
     color: $color-secondary-600;
     text-decoration: none;
+
+    svg path {
+      fill: $color-secondary-600;
+    }
+  }
+}
+
+.activeLink {
+  color: $color-secondary-600;
+
+  svg path {
+    fill: $color-secondary-600;
   }
 }

@@ -5,7 +5,7 @@ import styles from "./ContentHeader.module.scss";
 
 const ContentHeader: FC = () => {
   return (
-    <div className={styles.contentHeader}>
+    <div className={styles.wrapper}>
       <PageTitle />
       <UserInfo />
     </div>

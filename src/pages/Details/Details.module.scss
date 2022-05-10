@@ -1,9 +1,8 @@
 @import "./src/assets/styles/variables";
 
-.mainImage {
-  border-radius: 20px;
-  overflow: hidden;
-  height: 400px;
+.gallery {
+  display: flex;
+  align-items: stretch;
 
   img {
     object-fit: cover;
@@ -12,28 +11,37 @@
   }
 }
 
-.images {
-  img {
-    border-radius: 20px;
-    object-fit: cover;
-    width: 100%;
-    height: 120px;
-    margin-bottom: 20px;
-  }
+.galleryMore {
+  border-right: 1px solid #dbe2f3;
+  border-bottom: 1px solid #dbe2f3;
+  width: 50%;
+  height: 50%;
+  border-bottom-right-radius: 20px;
 }
 
-.address {
+.galleryMainImage {
+  overflow: hidden;
+  height: 300px;
+  border-radius: 20px;
+}
+
+.galleryItems {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.galleryItem {
+  width: 50%;
+  height: 50%;
+  overflow: hidden;
+}
+
+.info {
   border-bottom: 1px solid #dbe2f3;
-  padding-bottom: 20px;
-
-  p {
-    font-weight: 700;
-    font-size: 24px;
-  }
-
-  span {
-    color: $color-dark-300;
-  }
+  padding: 20px 0;
 }
 
 .features {
@@ -41,47 +49,4 @@
   display: flex;
   justify-content: space-between;
   font-size: 16px;
-}
-
-.panel {
-  position: relative;
-  padding: 20px;
-  background-color: #edf6ff;
-  border-radius: 20px;
-  //border: 2px solid #edf6ff;
-  box-shadow: 4px 24px 42px -30px rgba(147, 188, 219, 0.2);
-}
-
-.personalManager {
-  margin-bottom: 30px;
-}
-
-.personalManagerImage {
-  position: absolute;
-  top: -35px;
-  right: 10px;
-  width: 75px;
-  height: 75px;
-  overflow: hidden;
-  border-radius: 10px;
-
-  img {
-    width: 100%;
-    height: auto;
-  }
-}
-
-.personalManagerName {
-  margin-bottom: 10px;
-  font-size: 18px;
-}
-
-.personalManagerPhone {
-  font-size: 20px;
-  margin: 20px 0;
-}
-
-.personalManagerText {
-  color: $color-dark-300;
-  font-size: 12px;
 }

@@ -1,0 +1,38 @@
+@import "./src/assets/styles/variables";
+
+.wrapper {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.content {
+  padding: 20px;
+  border-radius: 20px;
+  color: $color-white;
+  background-color: $color-accent-3-900;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.infoRows {
+  margin-bottom: 30px;
+}
+
+.infoRow {
+  opacity: 0.9;
+  display: flex;
+  justify-content: space-between;
+}
+
+.image {
+  margin-right: 20px;
+}
+
+.phone {
+  font-size: 20px;
+  margin: 20px 0;
+}

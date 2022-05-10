@@ -4,7 +4,6 @@ import Space from "../../components/common/Space";
 import { Row, Col } from "../../components/common/Grid";
 import Button from "../../components/common/Button";
 import MoneySaveOnServices from "../../components/Banners/MoneySaveOnServices";
-import manager from "../../assets/images/manager.png";
 import useDocumentTitle from "../../hooks/useDocumentTitle";
 import styles from "./Overview.module.scss";
 
@@ -21,6 +20,7 @@ const state1: Props = {
   markers: {
     size: 0,
   },
+
   options: {
     chart: {
       type: "line",
@@ -29,6 +29,9 @@ const state1: Props = {
       },
       sparkline: {
         enabled: true,
+      },
+      animations: {
+        enabled: false,
       },
     },
     stroke: {
@@ -123,21 +126,6 @@ const OverviewPage: FC = () => {
         </Space>
       </Col>
       <Col width={{ xs: 3 }}>
-        <div className={styles.pageBlockTitle}>Personal manager</div>
-        <section className={`${styles.panel} ${styles.personalManager}`}>
-          <div className={styles.personalManagerImage}>
-            <img src={manager} alt="managerImg" />
-          </div>
-          <div className={styles.personalManagerName}>James Williams</div>
-          <div className={styles.personalManagerText}>
-            Do you have any questions? <br /> Please call me or send me a
-            message.
-          </div>
-          <div className={styles.personalManagerPhone}>+33 839 799 28 45</div>
-          <Button size="small" fluid>
-            Send message
-          </Button>
-        </section>
         <MoneySaveOnServices />
       </Col>
     </Row>

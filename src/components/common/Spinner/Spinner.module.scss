@@ -1,0 +1,15 @@
+.loader {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2.5px solid white;
+  border-bottom-color: transparent;
+  position: relative;
+  animation: spinner 1s linear infinite;
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(1turn);
+  }
+}

@@ -1,92 +1,60 @@
-import React, { FC, useState } from "react";
+import React, { FC, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-
 import { Row, Col } from "../../components/common/Grid";
 import useDocumentTitle from "../../hooks/useDocumentTitle";
-import ApartmentCard from "../../components/ApartmentCard";
+import PropertyCard from "../../components/PropertyCard";
 import Space from "../../components/common/Space";
 import PropertyMap from "../../components/PropertyMap";
 import styles from "./Explore.module.scss";
+import { getPropertiesByUserId } from "../../services/properties";
+import useAppSelector from "../../hooks/useAppSelector";
 
-import apartment1 from "../../assets/images/apartment-1.jpeg";
-import apartment2 from "../../assets/images/apartment-2.jpeg";
-import apartment3 from "../../assets/images/apartment-3.webp";
-
-const items = [
-  {
-    id: 1,
-    image: apartment1,
-    address: "17 Prioress St",
-    location: "London SE1 4TE, UK",
-    rooms: 3,
-    bathrooms: 1,
-    space: 66,
-    geo: {
-      lat: 51.506756,
-      lng: -0.245887,
-    },
-  },
-  {
-    id: 2,
-    image: apartment2,
-    address: "13 Bartholomew St",
-    location: "London SE1 4AJ, UK",
-    rooms: 2,
-    bathrooms: 1,
-    space: 43,
-    geo: {
-      lat: 51.49277,
-      lng: -0.127649,
-    },
-  },
-  {
-    id: 3,
-    image: apartment3,
-    address: "19 Vincent Square",
-    location: "London SW1P 2NA, UK",
-    rooms: 1,
-    bathrooms: 1,
-    space: 33,
-    geo: {
-      lat: 51.492745,
-      lng: -0.133946,
-    },
-  },
-  {
-    id: 3,
-    image: apartment1,
-    address: "19 Vincent Square",
-    location: "London SW1P 2NA, UK",
-    rooms: 1,
-    bathrooms: 1,
-    space: 33,
-    geo: {
-      lat: 51.492745,
-      lng: -0.233946,
-    },
-  },
-];
-
-const ApartmentsPage: FC = () => {
+const ExplorePage: FC = () => {
   useDocumentTitle("Explore");
-  const [active] = useState(items[0]);
+  const userId = useAppSelector(({ user }) => user.id);
+  const [items, setItems] = useState<any>([]);
+  const [active, setActive] = useState<any>(null);
+
+  useEffect(() => {
+    const getData = async () => {
+      try {
+        const data = await getPropertiesByUserId(userId);
+        setItems(data);
+        setActive(data[0]);
+        // eslint-disable-next-line no-empty
+      } catch (e) {}
+    };
+    getData();
+    // eslint-disable-next-line
+  }, [userId]);
+
+  if (!items.length) {
+    return null;
+  }
 
   return (
     <Row tag="section" className={styles.wrapper}>
-      <Col width="6">
-        <Space fluid>
-          {items.map((item) => (
-            <Link to={String(item.id)} key={item.id} className={styles.link}>
-              <ApartmentCard data={item} />
-            </Link>
-          ))}
-        </Space>
+      <Col width={{ xs: 12, md: 8, lg: 6 }}>
+        <div className={styles.scroll}>
+          <Space fluid>
+            {items.map((item: IProperty) => (
+              <Link
+                to={item.id}
+                key={item.id}
+                className={styles.link}
+                onMouseOver={() => setActive(item)}
+              >
+                <PropertyCard data={item} />
+              </Link>
+            ))}
+          </Space>
+        </div>
       </Col>
-      <Col width="6">
+      <Col width={{ xs: 12, md: 8, lg: 6 }}>
         <PropertyMap items={items} active={active} />
       </Col>
     </Row>
   );
 };
 
-export default ApartmentsPage;
+export default ExplorePage;

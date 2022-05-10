@@ -1,11 +1,14 @@
 import React, { FC } from "react";
 import classNames from "classnames";
 import styles from "./Button.module.scss";
+import Spinner from "../Spinner";
 
 interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   size?: "small" | "medium" | "large";
   view?: "default" | "outlined";
+  icon?: React.ReactNode;
   fluid?: boolean;
+  loading?: boolean;
 }
 
 const Button: FC<IProps> = ({
@@ -14,8 +17,11 @@ const Button: FC<IProps> = ({
   view = "default",
   children,
   className,
+  loading,
   fluid = false,
-  onClick,
+  disabled,
+  icon,
+  ...restProps
 }) => {
   const classes = classNames(
     styles.button,
@@ -24,12 +30,27 @@ const Button: FC<IProps> = ({
     styles[view],
     {
       [`${styles.block}`]: fluid,
+      [`${styles.disabled}`]: disabled,
     }
   );
 
+  const isDisabled = loading || disabled;
+
   return (
-    <button className={classes} type={type} onClick={onClick}>
-      {children}
+    <button
+      className={classes}
+      type={type}
+      disabled={isDisabled}
+      {...restProps}
+    >
+      {loading ? (
+        <Spinner />
+      ) : (
+        <>
+          {icon && <span className={styles.icon}>{icon}</span>}
+          {children}
+        </>
+      )}
     </button>
   );
 };

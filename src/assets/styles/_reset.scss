@@ -33,14 +33,15 @@ body {
   color: #212529;
   font-weight: 400;
   font-size: 1rem;
-  font-family: -apple-system BlinkMacSystemFont 'Segoe UI' Roboto 'Helvetica Neue' Arial sans-serif
-    'Apple Color Emoji' 'Segoe UI Emoji' 'Segoe UI Symbol' 'Noto Color Emoji';
+  font-family: -apple-system BlinkMacSystemFont "Segoe UI" Roboto
+    "Helvetica Neue" Arial sans-serif "Apple Color Emoji" "Segoe UI Emoji"
+    "Segoe UI Symbol" "Noto Color Emoji";
   line-height: 1.5;
   text-align: left;
   background-color: #fff;
 }
 
-[tabindex='-1']:focus {
+[tabindex="-1"]:focus {
   outline: 0 !important;
 }
 
@@ -159,45 +160,45 @@ select {
 }
 
 button,
-html [type='button'],
-[type='reset'],
-[type='submit'] {
+html [type="button"],
+[type="reset"],
+[type="submit"] {
   -webkit-appearance: button;
 }
 
 button::-moz-focus-inner,
-[type='button']::-moz-focus-inner,
-[type='reset']::-moz-focus-inner,
-[type='submit']::-moz-focus-inner {
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
   padding: 0;
   border-style: none;
 }
 
-input[type='radio'],
-input[type='checkbox'] {
+input[type="radio"],
+input[type="checkbox"] {
   box-sizing: border-box;
   padding: 0;
 }
 
-input[type='date'],
-input[type='time'],
-input[type='datetime-local'],
-input[type='month'] {
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="month"] {
   -webkit-appearance: listbox;
 }
 
-[type='number']::-webkit-inner-spin-button,
-[type='number']::-webkit-outer-spin-button {
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
 
-[type='search'] {
+[type="search"] {
   outline-offset: -2px;
   -webkit-appearance: none;
 }
 
-[type='search']::-webkit-search-cancel-button,
-[type='search']::-webkit-search-decoration {
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 

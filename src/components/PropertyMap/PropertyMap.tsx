@@ -11,26 +11,8 @@ const containerStyle = {
 };
 
 interface IProps {
-  items: Array<{
-    id: number | string;
-    image: string;
-    address: string;
-    location: string;
-    rooms: number;
-    bathrooms: number;
-    space: number;
-    geo: google.maps.LatLngLiteral;
-  }>;
-  active: {
-    id: number | string;
-    image: string;
-    address: string;
-    location: string;
-    rooms: number;
-    bathrooms: number;
-    space: number;
-    geo: google.maps.LatLngLiteral;
-  };
+  items: Array<IProperty>;
+  active: IProperty;
 }
 
 const PropertyMap: FC<IProps> = ({ items, active }) => {

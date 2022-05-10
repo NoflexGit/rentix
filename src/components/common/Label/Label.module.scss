@@ -1,0 +1,41 @@
+@import "./src/assets/styles/variables";
+
+.label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  text-transform: uppercase;
+  color: $color-white;
+}
+
+// Size
+.small {
+  height: 18px;
+  padding: 0 10px;
+  font-size: 10px;
+}
+
+.medium {
+  height: 22px;
+  padding: 0 10px;
+  font-size: 12px;
+  letter-spacing: 0.3px;
+}
+
+// Colors
+.blue {
+  background-color: $color-secondary-600;
+}
+
+.orange {
+  background-color: $color-accent-2-900;
+}
+
+.green {
+  background-color: $color-accent-4-900;
+}
+
+.dark {
+  background-color: $color-dark-900;
+}

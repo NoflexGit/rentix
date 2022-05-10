@@ -8,16 +8,16 @@ const locations = [
     title: "Overview",
   },
   {
-    pathname: "/explore",
+    pathname: "/dashboard/explore",
     title: "Explore",
   },
   {
-    pathname: "/clients",
-    title: "Clients",
+    pathname: "/dashboard/documents",
+    title: "Documents",
   },
   {
-    pathname: "/bills",
-    title: "Bills",
+    pathname: "/dashboard/messages",
+    title: "Messages",
   },
 ];
 

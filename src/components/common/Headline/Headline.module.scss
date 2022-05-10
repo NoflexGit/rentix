@@ -1,0 +1,21 @@
+@import "./src/assets/styles/variables";
+
+.component {
+  color: $color-dark-900;
+}
+
+.large {
+  font-size: 32px;
+}
+
+.small {
+  font-size: 18px;
+}
+
+.regular {
+  font-weight: 400;
+}
+
+.bold {
+  font-weight: 700;
+}

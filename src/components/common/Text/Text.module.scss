@@ -1,0 +1,43 @@
+@import "./src/assets/styles/variables";
+
+.component {
+}
+
+// Size
+.small {
+  font-size: 12px;
+}
+
+.medium {
+  font-size: 14px;
+}
+
+.large {
+  font-size: 18px;
+}
+
+// Weight
+.regular {
+  font-weight: normal;
+}
+
+.semi-bold {
+  font-weight: 500;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+// Colors
+.primary {
+  color: $color-dark-900;
+}
+
+.secondary {
+  color: $color-dark-600;
+}
+
+.primary-inverted {
+  color: $color-white;
+}
